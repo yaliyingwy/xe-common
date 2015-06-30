@@ -1,0 +1,24 @@
+{
+  "name": "xe-request",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "ywen <yaliyingwy@gmail.com>"
+  ],
+  "description": "net module for xebest",
+  "keywords": [
+    "xebest"
+  ],
+  "dependencies": {
+    "zepto": "latest",
+    "crypto-js": "latest"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
