@@ -16,7 +16,8 @@ var XE = (function(){
 			return;
 		}
 
-		console.log('data: ', data);
+		console.group();
+		console.log('data: %s', JSON.stringify(data));
 
 		var paramDic = {
 			uuid: uuid,     //后台根据这个参数存储每个手机的des密钥
@@ -25,18 +26,21 @@ var XE = (function(){
             data: data  //明文为json格式
 		}
 
-		$.post(url, paramDic, function(response){
-			cb(response);
-		});
+		
+		console.log('请求 url: %s', url);
+		console.log('发送参数: %s', JSON.stringify(paramDic));
+		
+
+		$.post(url, paramDic, function(data, status, xhr){
+			console.log('返回 data: %s \n status: %o \n xhr: %o \n', JSON.stringify(data), status, xhr);
+			console.groupEnd();
+			cb(data, status, xhr);
+
+		}, 'json');
 	}
 
 	xe.post = function(url, params, cb) {
-		if (key === undefined) {
-			console.error('no key set');
-			return;
-		}
-
-		xe.httpPost(url, params, false, key, new Array(1,2,3,4,5,6,7,8), cb);
+		xe.httpPost(url, params, false, '12345678', new Array(1,2,3,4,5,6,7,8), cb);
 	}
 
 	return xe;
