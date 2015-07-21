@@ -1,6 +1,5 @@
 {
-  "name": "xe-request",
-  "main": "xe-common.js",
+  "name": "xe-common",
   "version": "0.0.1",
   "authors": [
     "ywen <yaliyingwy@gmail.com>"
@@ -10,8 +9,6 @@
     "xebest"
   ],
   "dependencies": {
-    "zepto": "latest",
-    "crypto-js": "latest"
   },
   "license": "MIT",
   "ignore": [

@@ -1,0 +1,43 @@
+// mixin
+$ppr : 640/16/1rem;
+$color-bg : #eff3f6;
+$floor-border-color : #d6d7d9;
+$price-color : #d9493a;
+$more-color : #808080;
+$tips-color : #c61a00;
+
+@mixin box-sizing ($sizing) {
+    -webkit-box-sizing:$sizing;     
+       -moz-box-sizing:$sizing;
+            box-sizing:$sizing;
+}
+
+@mixin flexbox {
+	-webkit-display: -webkit-box;
+	-webkit-display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+@mixin blur($size){
+	-webkit-filter: blur($size); /* Chrome, Opera */
+	-moz-filter: blur($size);
+	-ms-filter: blur($size);   
+	filter: blur($size); 
+}
+
+@mixin transition($target,$time,$style){
+  -webkit-transition: $target $time $style;
+  -moz-transition: $target $time $style;
+  transition: $target $time $style;
+}
+
+@mixin preserve3d {
+	-webkit-transform-origin: 50% 50%;
+	-moz-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
